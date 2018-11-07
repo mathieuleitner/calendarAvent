@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="body">
+    <div class="banner"></div>
+    <div class="calendrier">
+      <div class="jour actif" id="1">
+        <div class="top">1</div>
+        <div class="bottom">1</div>
+      </div>
+      <div class="jour" id="1">
+        <div class="top">2</div>
+        <div class="bottom">2</div>
+      </div>
+      <div class="jour" id="3">
+        <div class="top">3</div>
+        <div class="bottom">3</div>
+      </div>
+      <div class="jour" id="4">
+        <div class="top">4</div>
+        <div class="bottom">4</div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .body{
+        margin:100px 100px 0 100px;
+      }
+      .banner{
+        background-image:url(https://picsum.photos/200/200);
+        width:100%;
+        background: contain;
+        background-repeat:no-repeat;
+        margin-bottom:50px;
+      }
+      .calendrier{
+        display:flex;
+        flex-direction:row;
+        align-content:stretch;
+        justify-content:space-around;
+      }
+      .jour{
+        margin:10px;
+        background:#ff8080;
+        width:300px;
+        height:300px;
+        text-align:center;
+        font-size:80px;
+        color:white;
+        font-weight:700;
+        text-shadow: 1px 1px 1px lightgray;
+        box-shadow: inset 0px 0px 10px gray;
+        background-image:url(https://picsum.photos/300/300);
+      }
+      
+      .top{
+        width:100%;
+        padding-top:50%;
+        padding-bottom:0px;
+        background:#ff3333;
+        height:0px;
+        line-height:0;
+        overflow:hidden;
+        transition:.5s;
+      }
+      
+      .bottom{
+        width:100%;
+        padding-top:0px;
+        padding-bottom: 50%;
+        background:#ff3333;
+        height:0px;
+        line-height:0;
+        overflow:hidden;
+        transition:.5s;
+      }
+      
+      .actif:hover .top{
+        transform: translate(-5%, -100%);
+        padding-top:33%;
+        box-shadow:0px 0px 5px gray;
+        width:110%;
+      }
+      .actif:hover .bottom{
+        transform: translate(-5%, 200%);
+        padding-bottom:33%;
+        box-shadow:0px 0px 5px gray;
+        width:110%;
+      }
+  </style>
+
+      
+</body>
+</html>
